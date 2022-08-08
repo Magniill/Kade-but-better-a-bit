@@ -189,6 +189,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.animation.addByPrefix('easy', 'EASY');
 		sprDifficulty.animation.addByPrefix('normal', 'NORMAL');
 		sprDifficulty.animation.addByPrefix('hard', 'HARD');
+		sprDifficulty.animation.addByPrefix('insane', 'HARD'); //sry too lazy to animate
 		sprDifficulty.animation.play('easy');
 		sprDifficulty.antialiasing = FlxG.save.data.antialiasing;
 		changeDifficulty();
