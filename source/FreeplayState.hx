@@ -65,6 +65,8 @@ class FreeplayState extends MusicBeatState
 				diffName = "-easy";
 			case 2:
 				diffName = "-hard";
+			case 3:
+				diffName = "-insane";
 		}
 
 		array.push(Song.conversionChecks(Song.loadFromJson(songId, diffName)));
@@ -240,13 +242,15 @@ class FreeplayState extends MusicBeatState
 				diffsThatExist.push("Easy");
 			if (Paths.doesTextAssetExist(Paths.json('songs/$songId/$songId')))
 				diffsThatExist.push("Normal");
+			if (Paths.doesTextAssetExist(Paths.json('songs/$songId/$songId')))
+				diffsThatExist.push("Insane");
 
 			if (diffsThatExist.length == 0)
 			{
 				Debug.displayAlert(meta.songName + " Chart", "No difficulties found for chart, skipping.");
 			}
 			#else
-			diffsThatExist = ["Easy", "Normal", "Hard"];
+			diffsThatExist = ["Easy", "Normal", "Hard", "Insane"];
 			#end
 
 			if (diffsThatExist.contains("Easy"))
