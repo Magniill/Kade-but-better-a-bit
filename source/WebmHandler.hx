@@ -170,7 +170,7 @@ class WebmHandler
 
 	public function new()
 	{
-		trace("THIS IS ANDROID! or some shit...");
+		trace("BRO WTH ANDROID, or something else");
 	}
 	#end
 }
