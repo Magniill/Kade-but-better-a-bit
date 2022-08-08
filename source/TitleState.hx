@@ -200,10 +200,7 @@ class TitleState extends MusicBeatState
 		FlxG.mouse.visible = false;
 
 		if (initialized)
-			skipIntro();
-		else
-		{
-			var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
+			var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond); // yay the intro is back
 			diamond.persist = true;
 			diamond.destroyOnNoUse = false;
 
@@ -228,6 +225,9 @@ class TitleState extends MusicBeatState
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 			Conductor.changeBPM(102);
 			initialized = true;
+		else
+		{
+			skipIntro();
 		}
 
 		// credGroup.add(credTextShit);
@@ -380,10 +380,10 @@ class TitleState extends MusicBeatState
 			case 0:
 				deleteCoolText();
 			case 1:
-				createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+				createCoolText(['this stoopid engine by']);
 			// credTextShit.visible = true;
 			case 3:
-				addMoreText('present');
+				addMoreText('notmagniill');
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
 			case 4:
@@ -424,13 +424,13 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-				addMoreText('Friday');
+				addMoreText('kade engine');
 			// credTextShit.visible = true;
 			case 14:
-				addMoreText('Night');
+				addMoreText('but a bit');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				addMoreText('better'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();
